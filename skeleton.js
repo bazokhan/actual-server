@@ -26,8 +26,18 @@ const PORT = 8085;
 const app = new Koa();
 
 getSqliteRouter({ dbPath }).then(router => {
+  // console.log(
+  //   router.stack
+  //     .filter(layer => layer.path === "/transactions")
+  //     .find(layer => layer.methods.includes("GET"))
+  //     .stack.toString()
+  // );
   app
-    .use(cors())
+    .use(
+      cors({
+        exposeHeaders: "content-range"
+      })
+    )
     .use(router.routes())
     .use(router.allowedMethods())
     .listen(PORT);
