@@ -4,10 +4,16 @@
 // Imports //
 //---------//
 
+const fs = require("fs");
 const path = require("path");
 const Koa = require("koa");
 const cors = require("@koa/cors");
 const sqliteToRest = require("sqlite-to-rest");
+
+fs.copyFileSync(
+  path.resolve(process.env.DB_PATH, "./db.sqlite"),
+  "./db.sqlite"
+);
 
 //------//
 // Init //

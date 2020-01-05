@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "generate": "node_modules\\.bin\\sqlite-to-rest.cmd generate-skeleton --db-path ./db.sqlite",
-    "start": "cross-env NODE_DB_PATH=./db.sqlite nodemon skeleton.js",
+    "start": "cross-env NODE_DB_PATH=./db.sqlite DB_PATH=\"C:\\Users\\albaz\\Google Drive\\Accounting\\Actual\\Elbaz\" nodemon skeleton.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
