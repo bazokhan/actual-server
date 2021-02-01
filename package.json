@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@koa/cors": "^3.0.0",
-    "koa": "^2.11.0",
+    "@koa/cors": "^3.1.0",
+    "koa": "^2.13.1",
     "sqlite-to-rest": "github:olsonpm/sqlite-to-rest"
   },
   "devDependencies": {
